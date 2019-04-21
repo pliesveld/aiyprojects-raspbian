@@ -17,7 +17,7 @@ import os
 import subprocess
 import tempfile
 
-RUN_DIR = '/run/user/%d' % os.getuid()
+RUN_DIR = '/run/%d' % os.getuid()
 
 def say(text, lang='en-US', volume=60, pitch=130, speed=100, device='default'):
     data = "<volume level='%d'><pitch level='%d'><speed level='%d'>%s</speed></pitch></volume>" % \
